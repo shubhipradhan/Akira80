@@ -1,7 +1,10 @@
 com\diamond\AkiraBACKEND\daoimpl\ItemDAOImpl.class
+META-INF\MANIFEST.MF
 com\diamond\AkiraBACKEND\model\Product.class
 com\diamond\AkiraBACKEND\App.class
 com\diamond\AkiraBACKEND\config\AppContextConfig.class
+META-INF\maven\com.diamond\AkiraBACKEND\pom.properties
+META-INF\maven\com.diamond\AkiraBACKEND\pom.xml
 com\diamond\AkiraBACKEND\daoimpl\CartDAOImpl.class
 com\diamond\AkiraBACKEND\dao\ItemDAO.class
 com\diamond\AkiraBACKEND\daoimpl\ProductDAOImpl.class

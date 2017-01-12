@@ -11,7 +11,10 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.Size;
 
+
 import org.hibernate.validator.constraints.NotEmpty;
+
+import org.springframework.web.multipart.MultipartFile;
 
 @Table
 @Entity
@@ -35,9 +38,11 @@ public class User {
 
 	private String mobile;
 
-	/*@Transient
-	private MultipartFile file;*/
 
+	@Transient
+	private MultipartFile userimage;
+	
+	
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "cartId")
 	private Cart cart;
@@ -105,5 +110,15 @@ public class User {
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
 	}
+
+	public MultipartFile getUserimage() {
+		return userimage;
+	}
+
+	public void setUserimage(MultipartFile userimage) {
+		this.userimage = userimage;
+	}
+	
+	
 
 }

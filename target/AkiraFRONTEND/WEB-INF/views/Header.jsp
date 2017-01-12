@@ -39,8 +39,8 @@
 
 <!-- Custom Styling -->
 <!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css" />
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 
 
 </head> 

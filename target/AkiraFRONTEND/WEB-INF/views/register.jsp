@@ -42,8 +42,8 @@
 
 <!-- Custom Styling -->
 <!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css" />
+<link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
 
 
 <style type="text/css">
@@ -94,7 +94,8 @@
 
 
 
-	<form:form action="${addAction}" modelAttribute="user">
+	<form:form action="${addAction}" modelAttribute="user"
+		enctype="multipart/form-data">
 
 
 
@@ -137,12 +138,23 @@
 			</tr>
 
 			<tr>
+				<td><form:label path="userimage">
+						<spring:message text="Image" />
+					</form:label></td>
+				<td><form:input type="file" path="userimage" /></td>
+			</tr>
+			<tr>
+			<td><input type="hidden" name="${_csrf.parameterName}"
+				value="${_csrf.token}" /></td>
+			</tr>
+			<tr>
 				<td colspan="2"><c:if test="${!empty user.username}">
 						<input type="submit" value="<spring:message text="Edit User"/>" />
 					</c:if> <c:if test="${empty user.username}">
 						<input type="submit" value="<spring:message text="Add User"/>" />
 					</c:if></td>
 			</tr>
+
 		</table>
 	</form:form>
 	<br>
@@ -170,7 +182,7 @@
 					<td>${user.role}</td>
 					<td>${user.enabled}</td>
 					<td>${user.mobile}</td>
-					
+
 					<td><a href="<c:url value='/edit/${user.userId}' />">Edit</a></td>
 					<td><a href="<c:url value='/remove/${user.userId}' />">Delete</a></td>
 				</tr>

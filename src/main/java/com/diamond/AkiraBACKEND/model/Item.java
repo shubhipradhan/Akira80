@@ -1,6 +1,7 @@
 package com.diamond.AkiraBACKEND.model;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -13,12 +14,12 @@ public class Item {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int itemId;
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="productId")
 	private Product product;
 	private int quantity;
 	private double itemTotal;
-	@ManyToOne
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="cartId")
 	private Cart cart;
 	

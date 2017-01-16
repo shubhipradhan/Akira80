@@ -22,7 +22,7 @@ public class AppContextConfig {
 	{
 		BasicDataSource dataSource=new BasicDataSource();
 		dataSource.setDriverClassName("org.h2.Driver");
-		dataSource.setUrl("jdbc:h2:~/Akira");
+		dataSource.setUrl("jdbc:h2:~/DiamondAkira");
 		dataSource.setUsername("sa");
 		dataSource.setPassword("");
 		
@@ -46,7 +46,7 @@ public class AppContextConfig {
 		Properties properties=new Properties();
 		properties.setProperty("hibernate.dialect", "org.hibernate.dialect.H2Dialect");
 		properties.setProperty("hibernate.show_sql", "true");
-		properties.setProperty("hibernate.hbm2ddl.auto", "update");
+		properties.setProperty("hibernate.hbm2ddl.auto", "create");
 		
 		return properties;
 	}

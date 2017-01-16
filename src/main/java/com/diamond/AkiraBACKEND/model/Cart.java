@@ -3,6 +3,7 @@ package com.diamond.AkiraBACKEND.model;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -23,12 +24,12 @@ public class Cart {
 	private int cartId;
 	
 	
-	@OneToMany
+	@OneToMany( fetch=FetchType.LAZY)
 	@JoinColumn(name="itemId")
 	private List<Item> items;
 	
 	
-	@OneToOne
+	@OneToOne( fetch=FetchType.LAZY)
 	@JoinColumn(name="userId")
 	private User user;
 	

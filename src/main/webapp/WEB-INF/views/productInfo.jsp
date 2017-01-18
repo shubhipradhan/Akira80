@@ -27,7 +27,7 @@ body {
 <body ng-app="addToCartApp">
 	<%@include file="Header.jsp"%>
 	<div class="col-xs-6"></div>
-	<div class="col-xs-6">
+	<div class="col-xs-6" ng-controller="addToCartCtrl">
 		<h2>Product :</h2>
 		<h3>${product.productName }</h3>
 
@@ -43,9 +43,13 @@ body {
 		<h2>Product Price</h2>
 		<h3>${product.price}</h3>
 		<br>
-		<a class="btn btn-primary"
+		<!-- <a class="btn btn-primary"
 			ng-click="addItemToCart('{$product.productId}')" href="order">Add
-			To Cart</a>
+			To Cart</a> -->
+			
+			<%-- <a class="btn btn-primary" href="<c:url value='/AddtoCart/${product.productId}' />">Cart</a> --%>
+			
+			<a class="btn btn-primary" href="cart_checkout">Checkout</a>
 	</div>
 </body>
 </html>

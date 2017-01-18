@@ -11,5 +11,6 @@ HOME
 <h2><a href="register">Register User</a></h2>
 <h2><a href="welcomePage">Login</a></h2>
 <h2><a href="productDetails">Product</a></h2>
+<a href="startFlow">Initiate web flow</a>
 </body>
 </html>

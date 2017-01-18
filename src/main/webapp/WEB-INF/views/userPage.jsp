@@ -10,5 +10,6 @@
 <%@include file="UserHeader.jsp" %>
 User Page
 <h2>User Page user access</h2>
+<h2><a href="productDetails">Product Details</a></h2>
 </body>
 </html>

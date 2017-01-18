@@ -1,0 +1,35 @@
+
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+        http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+<!-- <on-start>
+<evaluate expression="orderWebFlow.initflow" result="flowscope.order">
+</evaluate></on-start>
+	<view-state id="shippingaddress" view="shippingAddress" model="shippingAddress">
+		<transition on="submitShippingAddress" to="shippingDetails"></transition>
+		
+	</view-state>
+	
+	<action-state id="shippingDetails">
+	<evaluate expression="orderWebFlow.addShippingAddress(flowScope.order,shippingAddress)">
+	</evaluate>
+	<transition on="success" to="page2"></transition>
+		
+	</action-state> -->
+	
+<view-state id="page1" view="Page1.jsp">
+		<transition on="event1" to="page2"></transition>
+	</view-state>
+	
+	<view-state id="page2" view="Page2.jsp">
+	<transition on="event2" to="page3"></transition>
+	</view-state>
+	
+	<view-state id="page3" view="Page3.jsp">
+		
+	</view-state>
+
+	
+</flow>

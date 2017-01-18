@@ -65,8 +65,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
         
         .antMatchers("/adminPage/").access("hasRole('ADMIN')")
         .antMatchers("/admin/").access("hasRole('ADMIN')")
-        .antMatchers("/register").access("hasRole('ADMIN')")
-        
+        //.antMatchers("/register").access("hasRole('ADMIN')")
+        //.antMatchers("/AddtoCart/**").access("hasRole('USER')")
         .and().formLogin().loginPage("/login").successHandler(customSuccessHandler)
         .usernameParameter("ssoId").passwordParameter("password")
         .and().csrf()

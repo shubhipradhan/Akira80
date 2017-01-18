@@ -95,7 +95,7 @@
 
 
 	<form:form action="${addAction}" modelAttribute="user"
-		enctype="multipart/form-data">
+		enctype="multipart/form-data" >
 
 
 
@@ -137,16 +137,16 @@
 				<td><form:input path="mobile" /></td>
 			</tr>
 
-			<tr>
+		<%-- 	<tr>
 				<td><form:label path="userimage">
 						<spring:message text="Image" />
 					</form:label></td>
 				<td><form:input type="file" path="userimage" /></td>
-			</tr>
-			<tr>
+			</tr> --%>
+			<%--  <tr>
 			<td><input type="hidden" name="${_csrf.parameterName}"
 				value="${_csrf.token}" /></td>
-			</tr>
+			</tr> --%>
 			<tr>
 				<td colspan="2"><c:if test="${!empty user.username}">
 						<input type="submit" value="<spring:message text="Edit User"/>" />

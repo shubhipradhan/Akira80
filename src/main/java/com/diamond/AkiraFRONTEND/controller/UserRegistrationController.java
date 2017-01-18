@@ -34,21 +34,13 @@ public class UserRegistrationController {
 	
 	
 	
-	@RequestMapping(value="/register",method=RequestMethod.GET)
-	public String listUsers(Model model)
-	{
-		model.addAttribute("user",new User());
-		System.out.println("inside controller");
-		
-		model.addAttribute("listUsers",userDAO.listUsers());
-		return "register";
-	}
 	
-	@RequestMapping(value= "/users/add", method=RequestMethod.POST)
+	
+	@RequestMapping(value= "userregister/users/add", method=RequestMethod.POST)
 	public String addUser( @ModelAttribute("user") User user,BindingResult result,HttpServletRequest request )
 	{
 		
-		//String filename = null;
+		/*//String filename = null;
 		byte[] bytes;
 		
 		if (!user.getUserimage().isEmpty()) {
@@ -71,7 +63,7 @@ public class UserRegistrationController {
 			}
 		}
 		
-		
+		*/
 		
 		if(result.hasErrors())
 		{
@@ -84,28 +76,10 @@ public class UserRegistrationController {
 				userDAO.updateUser(user);
 			}
 
-			return "redirect:/register";
+			return "redirect:/login";
 		}
 	}
 	
-	
-	@RequestMapping("/remove/{userId}")
-	public String deleteUser(@PathVariable("userId") int userId)
-	{
-		userDAO.deleteUser(userId);
-		return "redirect:/register";
-	}
-	
-	
-	@RequestMapping("/edit/{userId}")
-	public String editUser(@PathVariable("userId") int userId, Model model)
-	{
-		model.addAttribute("user", userDAO.getUserById(userId));
-		
-		
-        model.addAttribute("listUsers", userDAO.listUsers());
-        return "register";
-	}
 	
 	
 }

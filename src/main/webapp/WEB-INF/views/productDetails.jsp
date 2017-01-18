@@ -66,8 +66,10 @@ angular.module("productApp",[])
           <td>{{product.desc}}</td>
         <td>{{product.price}}</td>
        
-        <td><a href="<c:url value='/productInfo/{{product.productId}}' />"><i class="fa fa-question" aria-hidden="true"></i></a></td>
-  
+<%--         <td><a class="btn btn-primary" href="<c:url value='/productInfo/{{product.productId}}' />">Info</a></td>
+ --%>  
+<%--  <td><a class="btn btn-primary" href="<c:url value='/AddtoCart/{{product.productId}}' />">Cart</a></td> --%>
+  <td><a class="btn btn-primary" href="<c:url value='/productInfo/{{product.productId}}' />">Info</a></td>
       </tr>
 	  
 	

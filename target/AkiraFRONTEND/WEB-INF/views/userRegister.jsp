@@ -47,7 +47,7 @@
 
 <!-- Custom Styling -->
 <!-- Bootstrap -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
 
 
@@ -63,7 +63,7 @@
 	<h1>User Registration</h1>
 <br>
 <br>
-	<c:url var="addAction" value="/users/add"></c:url>
+	<c:url var="addAction" value="userregister/users/add"></c:url>
 
 
 
@@ -110,16 +110,15 @@
 					</form:label></td>
 				<td><form:input path="mobile" /></td>
 			</tr>
-
+			
 			<tr>
 				<td colspan="2"><c:if test="${!empty user.username}">
-						<input type="submit"  value="<spring:message text="Edit User"/>" />
-					</c:if> 
-					<br>
-					<c:if test="${empty user.username}">
-						<input type="submit" class="btn btn-primary" value="<spring:message text="Regiter with Us"/>" />
+						<input type="submit" value="<spring:message text="Edit User"/>" />
+					</c:if> <c:if test="${empty user.username}">
+						<input type="submit" value="<spring:message text="Add User"/>" />
 					</c:if></td>
 			</tr>
+			
 		</table>
 	</form:form>
 

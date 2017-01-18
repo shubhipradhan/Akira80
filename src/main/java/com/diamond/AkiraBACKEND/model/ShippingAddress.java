@@ -4,12 +4,14 @@ import java.io.Serializable;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotBlank;
 import org.springframework.stereotype.Component;
 
 @Entity
 @Component
+@Table(name="SHIPPINGADDRESS")
 public class ShippingAddress implements Serializable {
 
 	private static final long serialVersionUID = 1L;

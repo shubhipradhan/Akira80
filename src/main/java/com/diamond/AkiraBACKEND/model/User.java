@@ -14,11 +14,12 @@ import javax.validation.constraints.Size;
 
 
 import org.hibernate.validator.constraints.NotEmpty;
-
+import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
-@Table
+@Table(name="USER")
 @Entity
+@Component
 public class User {
 
 	@Id
